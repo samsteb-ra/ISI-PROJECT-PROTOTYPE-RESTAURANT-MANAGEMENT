@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>co.unillanos</groupId>
-    <artifactId>carbonifero-prototipo</artifactId>
+    <artifactId>carbonifero-integrado</artifactId>
     <version>1.0</version>
-    <name>Carbonífero - Prototipo Ordenar platos por mesa</name>
+    <name>Carbonífero - Prototipo integrado (Ordenar platos + Gestión de recetas)</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
