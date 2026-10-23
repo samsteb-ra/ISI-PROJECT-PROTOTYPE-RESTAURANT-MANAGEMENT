@@ -422,7 +422,11 @@ public class OrdenesView extends BorderPane {
         for (LineaOrden l : carrito) {
             Item item = l.getItem();
             if (item.controlaStock()) {
-                item.descontar(l.getCantidad()); // descuenta los ingredientes de la receta
+                String errorConsumo = datos.consumirPorPreparacion(item, l.getCantidad());
+                if (errorConsumo != null) {
+                    mostrarAviso(errorConsumo);
+                    return;
+                }
             }
             LineaOrden existente = null;
             for (LineaOrden a : abiertas) {
@@ -439,13 +443,29 @@ public class OrdenesView extends BorderPane {
             totalComanda += l.getSubtotal();
         }
 
-        // Alerta de stock mínimo, ya con el inventario actualizado
+        // Alerta de stock mínimo de platos e ingredientes, ya con el inventario actualizado
         for (LineaOrden l : carrito) {
             Item item = l.getItem();
             if (item.controlaStock() && item.getPorciones() <= Datos.STOCK_MINIMO) {
                 alertas.append("- ").append(item.getNombre())
                         .append(item.getPorciones() == 0 ? " (agotado)" : " (quedan " + item.getPorciones() + ")")
                         .append("\n");
+            }
+        }
+        for (LineaOrden l : carrito) {
+            if (!l.getItem().controlaStock()) {
+                continue;
+            }
+            for (LineaReceta r : l.getItem().getReceta()) {
+                Ingrediente ing = r.getIngrediente();
+                if (ing.estaEnAlerta()) {
+                    String lineaIng = "- " + ing.getNombre() + (ing.estaAgotado()
+                            ? " (agotado)"
+                            : " (quedan " + ing.getStock() + " " + ing.getUnidad() + ")");
+                    if (alertas.indexOf(lineaIng) < 0) {
+                        alertas.append(lineaIng).append("\n");
+                    }
+                }
             }
         }
 

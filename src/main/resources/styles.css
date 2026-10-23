@@ -395,3 +395,18 @@
     -fx-background-color: -rojo;
     -fx-border-color: -rojo;
 }
+
+/* ================================================================
+   Prototipo Inventario de ingredientes (RF-02 / RF-03)
+   ================================================================ */
+.ing-item-alerta {
+    -fx-border-color: -rojo;
+}
+.ing-item-agotado {
+    -fx-background-color: #FDECEE;
+    -fx-border-color: -rojo;
+}
+.ing-item-agotado:selected {
+    -fx-background-color: -rojo;
+    -fx-text-fill: -blanco;
+}

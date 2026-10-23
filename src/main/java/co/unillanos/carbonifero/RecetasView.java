@@ -81,6 +81,7 @@ public class RecetasView extends BorderPane {
 
     /** Se llama al entrar al módulo: toma los cambios del inventario sin perder lo que se está editando. */
     public void alActivar() {
+        cmbIngrediente.setItems(FXCollections.observableArrayList(datos.getInventario()));
         reconstruirListaPlatos();
         refrescar();
     }

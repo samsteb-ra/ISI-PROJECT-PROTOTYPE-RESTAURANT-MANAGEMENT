@@ -14,10 +14,9 @@ import javafx.stage.Stage;
 
 /**
  * Prototipo integrado de Carbonífero.
- * Une el módulo "Ordenar platos por mesa" (RF-04) con el módulo "Gestión de recetas".
- * Ambos comparten los mismos datos de ejemplo (clase Datos): al cambiar una receta
- * cambia la disponibilidad al ordenar, y al confirmar una orden se descuenta el inventario.
- * Los datos viven en memoria (no hay base de datos).
+ * Une órdenes (RF-04), recetas e inventario (RF-02 / RF-03).
+ * Los tres módulos comparten Datos: al confirmar una orden se descuenta el inventario,
+ * al comprar o ajustar un insumo se recalcula la disponibilidad de los platos.
  */
 public class Main extends Application {
 
@@ -32,14 +31,15 @@ public class Main extends Application {
 
         OrdenesView ordenes = new OrdenesView(datos, css);
         RecetasView recetas = new RecetasView(datos, css);
+        InventarioView inventario = new InventarioView(datos, css);
 
-        // Navegación entre módulos
         ToggleGroup grupoNav = new ToggleGroup();
         ToggleButton navOrdenes = crearNav("Ordenar platos", grupoNav);
         ToggleButton navRecetas = crearNav("Gestión de recetas", grupoNav);
+        ToggleButton navInventario = crearNav("Inventario", grupoNav);
 
         BorderPane root = new BorderPane();
-        root.setTop(crearEncabezado(navOrdenes, navRecetas));
+        root.setTop(crearEncabezado(navOrdenes, navRecetas, navInventario));
         root.setCenter(ordenes);
 
         grupoNav.selectedToggleProperty().addListener((obs, anterior, nuevo) -> {
@@ -52,9 +52,12 @@ public class Main extends Application {
             if (nuevo == navOrdenes) {
                 ordenes.alActivar();
                 root.setCenter(ordenes);
-            } else {
+            } else if (nuevo == navRecetas) {
                 recetas.alActivar();
                 root.setCenter(recetas);
+            } else {
+                inventario.alActivar();
+                root.setCenter(inventario);
             }
         });
         navOrdenes.setSelected(true);
@@ -74,7 +77,7 @@ public class Main extends Application {
         return b;
     }
 
-    private HBox crearEncabezado(ToggleButton navOrdenes, ToggleButton navRecetas) {
+    private HBox crearEncabezado(ToggleButton navOrdenes, ToggleButton navRecetas, ToggleButton navInventario) {
         Label marca = new Label("CARBONÍFERO");
         marca.getStyleClass().add("marca");
         Region espacio = new Region();
@@ -82,7 +85,7 @@ public class Main extends Application {
         Label usuario = new Label("Administrador");
         usuario.getStyleClass().add("usuario");
 
-        HBox header = new HBox(16, marca, navOrdenes, navRecetas, espacio, usuario);
+        HBox header = new HBox(16, marca, navOrdenes, navRecetas, navInventario, espacio, usuario);
         header.setAlignment(Pos.CENTER_LEFT);
         header.getStyleClass().add("header");
         return header;

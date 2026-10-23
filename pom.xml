@@ -7,7 +7,7 @@
     <groupId>co.unillanos</groupId>
     <artifactId>carbonifero-integrado</artifactId>
     <version>1.0</version>
-    <name>Carbonífero - Prototipo integrado (Ordenar platos + Gestión de recetas)</name>
+    <name>Carbonífero - Prototipo integrado (Órdenes + Recetas + Inventario)</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
