@@ -582,4 +582,79 @@ public class OrdenesView extends BorderPane {
             lblAviso.setManaged(false);
         }
     }
+
+    /**
+ * Devuelve las mesas que tienen una cuenta pendiente de pago.
+ */
+public List<Integer> getMesasConCuentaAbierta() {
+    List<Integer> mesas = new ArrayList<>();
+
+    for (Map.Entry<Integer, List<LineaOrden>> entrada : ordenesAbiertas.entrySet()) {
+        if (!entrada.getValue().isEmpty()) {
+            mesas.add(entrada.getKey());
+        }
+    }
+
+    mesas.sort(Integer::compareTo);
+    return mesas;
+}
+
+/**
+ * Consulta los productos de una cuenta abierta.
+ */
+public List<LineaOrden> getLineasCuenta(int mesa) {
+    List<LineaOrden> lineas = ordenesAbiertas.get(mesa);
+
+    if (lineas == null) {
+        return new ArrayList<>();
+    }
+
+    return new ArrayList<>(lineas);
+}
+
+/**
+ * Obtiene el número de orden asociado a una mesa.
+ */
+public Integer getNumeroOrden(int mesa) {
+    return numeroOrden.get(mesa);
+}
+
+/**
+ * Calcula el total pendiente de una mesa.
+ */
+public int getTotalCuenta(int mesa) {
+    int total = 0;
+
+    for (LineaOrden linea : getLineasCuenta(mesa)) {
+        total += linea.getSubtotal();
+    }
+
+    return total;
+}
+
+/**
+ * Cierra una cuenta abierta después de validar el pago.
+ * Devuelve un mensaje de error o null si se cerró correctamente.
+ */
+public String cerrarCuenta(int mesa) {
+    List<LineaOrden> lineas = ordenesAbiertas.get(mesa);
+
+    if (lineas == null || lineas.isEmpty()) {
+        return "La mesa seleccionada no tiene una cuenta abierta.";
+    }
+
+    ordenesAbiertas.remove(mesa);
+    numeroOrden.remove(mesa);
+
+    ToggleButton botonMesa = botonesMesa.get(mesa);
+    if (botonMesa != null) {
+        botonMesa.getStyleClass().remove("mesa-ocupada");
+    }
+
+    if (mesaSeleccionada != null && mesaSeleccionada == mesa) {
+        actualizarEtiquetaMesa();
+    }
+
+    return null;
+}
 }
