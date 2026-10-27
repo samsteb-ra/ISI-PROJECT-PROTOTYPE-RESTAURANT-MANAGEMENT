@@ -1,0 +1,28 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="rAcyvMdZZh2OoMM7mR9w">
+    <mxGraphModel dx="719" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UYkHtgntxF3dYIvg4mxQ-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Administrador" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="UYkHtgntxF3dYIvg4mxQ-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="310" width="360" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UYkHtgntxF3dYIvg4mxQ-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Restaurante Carbonifero" vertex="1">
+          <mxGeometry height="30" width="290" x="195" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UYkHtgntxF3dYIvg4mxQ-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=none;" value="Generar reporte de ventas" vertex="1">
+          <mxGeometry height="80" width="120" x="280" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="UYkHtgntxF3dYIvg4mxQ-5" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UYkHtgntxF3dYIvg4mxQ-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="100" y="200" as="sourcePoint" />
+            <mxPoint x="280" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

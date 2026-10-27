@@ -1,0 +1,53 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="uAt9QVzj0uwVUC8zCThy">
+    <mxGraphModel dx="719" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eTsY-kXkSwTtuYi8QvFo-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Cajero" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="eTsY-kXkSwTtuYi8QvFo-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="360" width="460" x="155" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eTsY-kXkSwTtuYi8QvFo-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Restaurante Carbonifero" vertex="1">
+          <mxGeometry height="30" width="290" x="240" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eTsY-kXkSwTtuYi8QvFo-7" edge="1" parent="1" source="eTsY-kXkSwTtuYi8QvFo-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.249;entryY=0.046;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=open;endFill=0;dashed=1;entryPerimeter=0;" target="eTsY-kXkSwTtuYi8QvFo-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vBkAVHZPfAf3DhTa2GKe-2" connectable="0" parent="eTsY-kXkSwTtuYi8QvFo-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=30;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&amp;lt;&amp;lt;include&amp;gt;&amp;gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0051" y="-1" as="geometry">
+            <mxPoint x="20" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O2MTSOoT5Sdp67AAgX35-2" edge="1" parent="1" source="eTsY-kXkSwTtuYi8QvFo-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.733;entryY=0.062;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=open;endFill=0;dashed=1;entryPerimeter=0;" target="O2MTSOoT5Sdp67AAgX35-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vBkAVHZPfAf3DhTa2GKe-4" connectable="0" parent="O2MTSOoT5Sdp67AAgX35-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; background-color: rgb(236, 236, 236);&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20connectable%3D%220%22%20parent%3D%221%22%20style%3D%22edgeLabel%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3B%22%20value%3D%22%26lt%3Bfont%20style%3D%26quot%3Bfont-size%3A%2012px%3B%26quot%3B%26gt%3B%26amp%3Blt%3B%26amp%3Blt%3Binclude%26amp%3Bgt%3B%26amp%3Bgt%3B%26lt%3B%2Ffont%26gt%3B%22%20vertex%3D%221%22%3E%3CmxGeometry%20x%3D%22448%22%20y%3D%22306%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;font color=&quot;rgba(0, 0, 0, 0)&quot; face=&quot;monospace&quot;&gt;&lt;span style=&quot;font-size: 0px;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20connectable%3D%220%22%20parent%3D%221%22%20style%3D%22edgeLabel%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3B%22%20value%3D%22%26lt%3Bfont%20style%3D%26quot%3Bfont-size%3A%2012px%3B%26quot%3B%26gt%3B%26amp%3Blt%3B%26amp%3Blt%3Binclude%26amp%3Bgt%3B%26amp%3Bgt%3B%26lt%3B%2Ffont%26gt%3B%22%20vertex%3D%221%22%3E%3CmxGeometry%20x%3D%22448%22%20y%3D%22306%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0133" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eTsY-kXkSwTtuYi8QvFo-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=none;" value="Generar cuenta de cobro" vertex="1">
+          <mxGeometry height="80" width="120" x="325" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="eTsY-kXkSwTtuYi8QvFo-5" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eTsY-kXkSwTtuYi8QvFo-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="100" y="280" as="sourcePoint" />
+            <mxPoint x="280" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eTsY-kXkSwTtuYi8QvFo-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=none;" value="Gestionar devolucion de platos" vertex="1">
+          <mxGeometry height="80" width="120" x="485" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="O2MTSOoT5Sdp67AAgX35-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=none;" value="Ordenar platos por mesa" vertex="1">
+          <mxGeometry height="80" width="120" x="170" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ap5_LXdGEdDEzye047zu-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=-30;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="280" y="285" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
